@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Form
+  from(action="/results" method="post")
+    label(for="firstName") First Name:
+    input(type="text" name="firstName" id="firstName")
+    br
+    label(for="lastName") Last Name:
+    input(type="text" name="lastName" id="lastName")
+    br
+    label(for="type") Banking level:
+    select(name="type" id="type")
+      option(value = "Bronze") Bronze
+      option(value = "Silver") Silver
+      option(value = "Gold") Gold
+    br
+    label(for="dateOfBirth") DOB
+    input(type="date" name="dateOfBirth" id="dateOfBirth")
+    br
+    label(for="description") Description of self:
+    br
+    textarea(id="description" name = "description" cols=40 rows=5)
+    br
+    input(type="radio" name="insurance" id="Yes" value="Yes")
+    label(for="Yes") Yes:
+    input(type="radio" name="insurance" id="No" value="No")
+    label(for="No") No:
+    br
+    button(type="submit") Submit This
